@@ -1,0 +1,29 @@
+name: Model Prediction Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test_model_integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: |
+          # Install core libraries and the testing framework
+          pip install pandas numpy scikit-learn xgboost pytest
+
+      - name: Run Pytest Prediction Test
+        run: |
+          pytest tests/
