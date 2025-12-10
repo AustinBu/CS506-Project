@@ -2,14 +2,16 @@ Final Report
 
 Build Instructions:
 pip install -r requirements.txt
+Since the dataset are too large to upload to github, please download them from kaggle in the links below
+and put them in the kaggle/input folder.
+https://www.kaggle.com/datasets/whigmalwhim/steam-releases?select=game_data_all.csv
+https://www.kaggle.com/datasets/joebeachcapital/top-1000-steam-games
 
 Data Collection:
 The initial plan to use SteamDB and Steam API fell short since many endpoints are not available 
 to regular users. The ones that are available do not keep track of temporal data, and so I am 
 only able to scrape current concurrent player count and current price, not release price. I 
 ended up using 2 kaggle datasets and processing them to obtain data I wanted.
-https://www.kaggle.com/datasets/whigmalwhim/steam-releases?select=game_data_all.csv
-https://www.kaggle.com/datasets/joebeachcapital/top-1000-steam-games
 
 Data Visualization:
 ![](visuals/price.png)
