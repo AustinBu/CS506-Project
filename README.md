@@ -1,4 +1,5 @@
 Final Report
+Video: https://youtu.be/a1TfH_YTBvg
 
 Build Instructions:
 pip install -r requirements.txt
@@ -6,6 +7,10 @@ Since the dataset are too large to upload to github, please download them from k
 and put them in the kaggle/input folder.
 https://www.kaggle.com/datasets/whigmalwhim/steam-releases?select=game_data_all.csv
 https://www.kaggle.com/datasets/joebeachcapital/top-1000-steam-games
+
+Testing:
+There is one test to ensure that the model has the correct dimensions and can predict a category.
+It will run every time there is a push or pull request to main or master.
 
 Data Collection:
 The initial plan to use SteamDB and Steam API fell short since many endpoints are not available 
@@ -75,6 +80,3 @@ a game will get any attention at all.
 Notes:
 The model1 in the repo is version of the model without platform information (Windos/Mac/Linux). I kept it
 because it has slightly better F1 macro performace.
-
-Video:
-https://youtu.be/9S-Sq2wuPPE
